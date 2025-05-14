@@ -23,6 +23,16 @@ While a few countries—such as the United States and some Western European mark
 
 ![Country Conversion Map](outputs/country_conversion_map.png)
 
+To assess how reliable each country’s conversion rate is, we calculated 95% confidence intervals. This helps distinguish statistically meaningful patterns from noise, especially for countries with fewer sessions.
+
+#### Country Conversion Rates with 95% Confidence Intervals
+
+| Country        | Sessions | Conversions | Conversion Rate (%) | 95% CI (Lower - Upper) |
+|----------------|----------|-------------|----------------------|-------------------------|
+| United States  | 4,136    | 95          | 2.30%                | 1.88% – 2.80%           |
+| Israel         | 60       | 1           | 1.67%                | 0.29% – 8.86%           |
+| Canada         | 308      | 1           | 0.32%                | 0.06% – 1.82%           |
+
 ### 2. **Funnel Waterfall by Device**
 
 This graph illustrates the user journey through four progressive stages of engagement:
@@ -40,13 +50,26 @@ This chart helps teams pinpoint which funnel stages and device types need urgent
 
 ![Funnel Drop-off](outputs/funnel_dropoff_by_device.png)
 
-#### 💰 Estimated Revenue Lost per Funnel Stage
+The following breakdown estimates the total revenue lost at each stage of the funnel by multiplying drop-offs with the average revenue per conversion (~$134). This quantifies the cost of user leakage.
+
+#### Estimated Revenue Lost per Funnel Stage
 
 | Stage                         | Drop-offs | Estimated Revenue Lost ($) |
 |------------------------------|-----------|-----------------------------|
 | Browsed → Engaged            | 7,239     | $973,164.23                 |
 | Engaged → Deep Engagement    | 356       | $47,858.33                  |
 | Deep Engagement → Converted  | 682       | $91,683.66                  |
+
+I compared mid-funnel users who failed to convert with those who did. The gap in engagement time and pageviews offers clues to where deeper content or better UX could prevent abandonment.
+
+#### Mid-Funnel Drop-Off Comparison
+
+| Metric                       | Converted Users | Non-Converting Engaged Users |
+|-----------------------------|------------------|-------------------------------|
+| Average Pageviews           | 23.95            | 10.16                         |
+| Average Time on Site (sec)  | 960.77           | 433.60                        |
+| Top Source                  | (direct)         | (direct)                      |
+| Top Device                  | desktop          | desktop                       |
 
 ### 3. **Session Duration vs Conversion**
 
@@ -82,6 +105,16 @@ The broader trend across the heatmap is that mobile and tablet users convert les
 By combining both source and device views, this chart offers targeted optimization opportunities—such as reallocating spend, adjusting messaging by platform, or improving cross-device consistency.
 
 ![Source Device Heatmap](outputs/source_device_heatmap.png)
+
+To evaluate performance, we compared your actual device-level conversion rates with public industry benchmarks. This reveals how each platform is performing relative to expected norms.
+
+#### Device Conversion Rates vs. Industry Benchmarks
+
+| Device  | Sessions | Conversions | Your Conversion Rate (%) | Industry Avg (%) | Delta |
+|---------|----------|-------------|---------------------------|------------------|--------|
+| Desktop | 6,111    | 88          | 1.44%                     | 2.5%             | -1.06% |
+| Mobile  | 3,437    | 7           | 0.20%                     | 1.9%             | -1.70% |
+| Tablet  | 452      | 2           | 0.44%                     | 2.2%             | -1.76% |
 
 ## Business Takeaways
 
