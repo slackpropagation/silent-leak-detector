@@ -40,6 +40,14 @@ This chart helps teams pinpoint which funnel stages and device types need urgent
 
 ![Funnel Drop-off](outputs/funnel_dropoff_by_device.png)
 
+#### 💰 Estimated Revenue Lost per Funnel Stage
+
+| Stage                         | Drop-offs | Estimated Revenue Lost ($) |
+|------------------------------|-----------|-----------------------------|
+| Browsed → Engaged            | 7,239     | $973,164.23                 |
+| Engaged → Deep Engagement    | 356       | $47,858.33                  |
+| Deep Engagement → Converted  | 682       | $91,683.66                  |
+
 ### 3. **Session Duration vs Conversion**
 
 This graph explores the relationship between how long a user stays on the site (session duration) and their likelihood to convert. Sessions are grouped into time buckets (e.g., 0–10 seconds, 1–5 minutes, etc.), and the corresponding conversion rate is calculated for each.
