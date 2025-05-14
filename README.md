@@ -34,17 +34,29 @@ Color-coded heatmap of top 10 traffic sources and their performance across devic
 ## Folder Structure
 
 ```
-📦 silent-leak-detector/
+silent-leak-detector/
 ├── data/
-│   └── cleaned_sessions.csv
-├── pages/
-│   ├── country_conversion_map.py
-│   ├── funnel_waterfall.py
-│   ├── session_duration_correlation.py
-│   └── source_device_heatmap.py
+│   ├── cleaned_sessions.csv
+│   └── raw_sessions.csv
 ├── outputs/
-│   └── *.png (optional export)
-└── README.md
+│   ├── country_conversion_map.png
+│   ├── funnel_dropoff_by_device.png
+│   ├── session_duration_vs_conversion.png
+│   └── source_device_heatmap.png
+├── pages/
+│   ├── Country_Conversion_Map.py
+│   ├── Funnel_Dropoff_by_Device.py
+│   ├── Session_Duration_vs_Conversion.py
+│   └── Source_x_Device_Heatmap.py
+├── scripts/
+│   └── clean_data.py
+├── Homepage.py
+├── leak_analysis.ipynb
+├── .gitignore
+├── LICENSE
+├── README.md
+└── requirements.txt
+
 ```
 
 ## Setup & Requirements
