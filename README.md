@@ -89,13 +89,15 @@ This chart is especially useful for UX and content teams who want to align desig
 ### 4. **Source × Device Heatmap**
 
 This heatmap breaks down conversion performance across two dimensions:
-	•	Traffic source (e.g., direct, Google Calendar, Outlook, Instagram, paid ads)
+	
+ 	•	Traffic source (e.g., direct, Google Calendar, Outlook, Instagram, paid ads)
 	•	Device type (desktop, mobile, tablet)
 
 Each cell represents the conversion rate for a specific source-device combo, color-coded from low to high. The top 10 most frequent sources are included to focus on the most impactful segments.
 
 This visualization is designed to help answer questions like:
-	•	Which sources bring high-quality traffic vs. high-volume but low-converting users?
+	
+ 	•	Which sources bring high-quality traffic vs. high-volume but low-converting users?
 	•	Do certain sources work better on desktop vs. mobile?
 	•	Are there device-specific UX issues that may be suppressing conversion?
  
@@ -123,26 +125,26 @@ This analysis identifies critical leaks, behavioral patterns, and high-impact op
 
 ### Major Leak Points
 	
-•	Biggest leak: The most significant user drop-off occurs immediately after landing—between the “Browsed” and “Engaged” stages. A large portion of sessions end without any meaningful interaction, indicating weak first impressions, unclear CTAs, or misaligned landing page content.
+	•	Biggest leak: The most significant user drop-off occurs immediately after landing—between the “Browsed” and “Engaged” stages. A large portion of sessions end without any meaningful interaction, indicating weak first impressions, unclear CTAs, or misaligned landing page content.
 
 ### Optimization Goals
 	
-•	Key engagement window: Focus on retaining users within the 5–20 minute session range, where conversion probability sharply increases. Keeping users engaged for at least 1–2 minutes, and ideally up to 10–20, should be a priority.
-•	Use this insight to inform content strategy, interaction design, and onboarding flow—especially on mobile where attention spans are shorter.
+	•	Key engagement window: Focus on retaining users within the 5–20 minute session range, where conversion probability sharply increases. Keeping users engaged for at least 1–2 minutes, and ideally up to 10–20, should be a priority.
+	•	Use this insight to inform content strategy, interaction design, and onboarding flow—especially on mobile where attention spans are shorter.
 
 ### High-Converting Patterns
 
-•	Top-converting combinations:
-•	Desktop + calendar.google.com
-•	Desktop + outlook.live.com
+	•	Top-converting combinations:
+	•	Desktop + calendar.google.com
+	•	Desktop + outlook.live.com
 
 These niche sources generate relatively fewer sessions but very high conversion rates, suggesting they attract highly qualified traffic. These should be prioritized for campaign expansion or lookalike audience modeling.
 
 ### Actionable Fixes
 
-•	Improve mobile and tablet UX: Address widespread performance gaps across devices. Start by auditing speed, responsiveness, navigation, and form completion on mobile/tablet.
-•	Target mid-funnel drop-off: Many users engage briefly but fail to reach “deep engagement.” Strengthen this middle layer with guided flows, product tours, and timely prompts.
-•	Refine ad spend strategy: Shift focus toward source-device pairs with strong ROI. Avoid allocating budget to sources that generate volume but yield low engagement or conversions—especially on mobile.
+	•	Improve mobile and tablet UX: Address widespread performance gaps across devices. Start by auditing speed, responsiveness, navigation, and form completion on mobile/tablet.
+	•	Target mid-funnel drop-off: Many users engage briefly but fail to reach “deep engagement.” Strengthen this middle layer with guided flows, product tours, and timely prompts.
+	•	Refine ad spend strategy: Shift focus toward source-device pairs with strong ROI. Avoid allocating budget to sources that generate volume but yield low engagement or conversions—especially on mobile.
 
 ## Folder Structure
 
