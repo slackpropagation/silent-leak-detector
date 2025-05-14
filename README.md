@@ -121,22 +121,27 @@ To evaluate performance, we compared your actual device-level conversion rates w
 This analysis identifies critical leaks, behavioral patterns, and high-impact opportunities across the user journey. It translates complex data into clear strategic priorities for marketing, UX, and product teams.
 
 ### Major Leak Points
-	•	Biggest leak: The most significant user drop-off occurs immediately after landing—between the “Browsed” and “Engaged” stages. A large portion of sessions end without any meaningful interaction, indicating weak first impressions, unclear CTAs, or misaligned landing page content.
+	
+•	Biggest leak: The most significant user drop-off occurs immediately after landing—between the “Browsed” and “Engaged” stages. A large portion of sessions end without any meaningful interaction, indicating weak first impressions, unclear CTAs, or misaligned landing page content.
 
 ### Optimization Goals
-	•	Key engagement window: Focus on retaining users within the 5–20 minute session range, where conversion probability sharply increases. Keeping users engaged for at least 1–2 minutes, and ideally up to 10–20, should be a priority.
-	•	Use this insight to inform content strategy, interaction design, and onboarding flow—especially on mobile where attention spans are shorter.
+	
+•	Key engagement window: Focus on retaining users within the 5–20 minute session range, where conversion probability sharply increases. Keeping users engaged for at least 1–2 minutes, and ideally up to 10–20, should be a priority.
+•	Use this insight to inform content strategy, interaction design, and onboarding flow—especially on mobile where attention spans are shorter.
 
 ### High-Converting Patterns
-	•	Top-converting combinations:
-	•	Desktop + calendar.google.com
-	•	Desktop + outlook.live.com
+
+•	Top-converting combinations:
+•	Desktop + calendar.google.com
+•	Desktop + outlook.live.com
+
 These niche sources generate relatively fewer sessions but very high conversion rates, suggesting they attract highly qualified traffic. These should be prioritized for campaign expansion or lookalike audience modeling.
 
 ### Actionable Fixes
-	•	Improve mobile and tablet UX: Address widespread performance gaps across devices. Start by auditing speed, responsiveness, navigation, and form completion on mobile/tablet.
-	•	Target mid-funnel drop-off: Many users engage briefly but fail to reach “deep engagement.” Strengthen this middle layer with guided flows, product tours, and timely prompts.
-	•	Refine ad spend strategy: Shift focus toward source-device pairs with strong ROI. Avoid allocating budget to sources that generate volume but yield low engagement or conversions—especially on mobile.
+
+•	Improve mobile and tablet UX: Address widespread performance gaps across devices. Start by auditing speed, responsiveness, navigation, and form completion on mobile/tablet.
+•	Target mid-funnel drop-off: Many users engage briefly but fail to reach “deep engagement.” Strengthen this middle layer with guided flows, product tours, and timely prompts.
+•	Refine ad spend strategy: Shift focus toward source-device pairs with strong ROI. Avoid allocating budget to sources that generate volume but yield low engagement or conversions—especially on mobile.
 
 ## Folder Structure
 
