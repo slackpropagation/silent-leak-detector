@@ -45,7 +45,6 @@ This graph illustrates the user journey through four progressive stages of engag
 
 The waterfall layout breaks down these stages by device type (desktop, mobile, tablet), showing how many users drop off at each step. This lets teams compare funnel efficiency across platforms.
 
-Key insight:
 The steepest drop-off happens immediately after the “Browsed” stage, with a large portion of users bouncing without interacting at all—indicating weak initial hooks or unclear CTAs. Only 10–14% reach the “Deep Engagement” stage, and conversion rates are close to zero across all devices. Mobile and tablet users tend to fall off faster than desktop users, highlighting possible UX friction or slower performance on smaller screens.
 
 This chart helps teams pinpoint which funnel stages and device types need urgent attention, so they can prioritize fixes like faster load times, clearer value props, or device-optimized content.
