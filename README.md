@@ -37,7 +37,8 @@ To assess how reliable each country’s conversion rate is, we calculated 95% co
 ### 2. **Funnel Waterfall by Device**
 
 This graph illustrates the user journey through four progressive stages of engagement:
-	1.	Browsed – The user visits the site but takes no meaningful action.
+	
+ 	1.	Browsed – The user visits the site but takes no meaningful action.
 	2.	Engaged – The user clicks, scrolls, or navigates within the site.
 	3.	Deep Engagement – The user triggers high-intent signals (e.g., watches a full video, views pricing, adds to cart).
 	4.	Converted – The user completes a goal (e.g., signs up, makes a purchase).
