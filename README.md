@@ -2,10 +2,10 @@
 
 This project provides a data-driven dashboard to analyze and visualize user engagement patterns across a digital platform, based on real session-level data exported from Google Analytics. It aims to uncover critical bottlenecks (“leaks”) in the user journey; specifically, where and why users disengage before converting. By breaking down behavior across dimensions like geography, traffic source, device type, session duration, and funnel stage, this tool helps marketing and product teams:
 
-	•	Quantify user drop-off rates at each key step of the funnel (e.g., browsing, engagement, conversion)
-	•	Identify low-performing combinations (e.g., mobile traffic from certain sources)
-	•	Highlight high-converting segments worth prioritizing in future campaigns
-	•	Provide visual insights to support optimization of UX, content strategy, and ad targeting
+•	Quantify user drop-off rates at each key step of the funnel (e.g., browsing, engagement, conversion)
+•	Identify low-performing combinations (e.g., mobile traffic from certain sources)
+•	Highlight high-converting segments worth prioritizing in future campaigns
+•	Provide visual insights to support optimization of UX, content strategy, and ad targeting
 
 Ultimately, the dashboard acts as a “leak detector”—guiding teams toward practical interventions (like improving mobile UX or tailoring mid-funnel messaging) to maximize conversion and reduce wasted acquisition spend.
 
