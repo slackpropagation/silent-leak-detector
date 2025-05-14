@@ -1,11 +1,11 @@
 # Silent Leak Detector: Session Analysis Dashboard
 
 This project provides a data-driven dashboard to analyze and visualize user engagement patterns across a digital platform, based on real session-level data exported from Google Analytics. It aims to uncover critical bottlenecks (“leaks”) in the user journey; specifically, where and why users disengage before converting. By breaking down behavior across dimensions like geography, traffic source, device type, session duration, and funnel stage, this tool helps marketing and product teams:
-
-•	Quantify user drop-off rates at each key step of the funnel (e.g., browsing, engagement, conversion)
-•	Identify low-performing combinations (e.g., mobile traffic from certain sources)
-•	Highlight high-converting segments worth prioritizing in future campaigns
-•	Provide visual insights to support optimization of UX, content strategy, and ad targeting
+	
+ 	•	Quantify user drop-off rates at each key step of the funnel (e.g., browsing, engagement, conversion)
+	•	Identify low-performing combinations (e.g., mobile traffic from certain sources)
+	•	Highlight high-converting segments worth prioritizing in future campaigns
+	•	Provide visual insights to support optimization of UX, content strategy, and ad targeting
 
 Ultimately, the dashboard acts as a “leak detector”—guiding teams toward practical interventions (like improving mobile UX or tailoring mid-funnel messaging) to maximize conversion and reduce wasted acquisition spend.
 
@@ -15,7 +15,8 @@ Ultimately, the dashboard acts as a “leak detector”—guiding teams toward p
 This interactive global choropleth map displays the conversion rates by country, based on aggregated session-level data. Each country is shaded according to its conversion performance, making it easy to spot geographic trends at a glance.
 
 The visualization helps teams:
-	•	Compare how different markets perform in terms of conversion
+	
+ 	•	Compare how different markets perform in terms of conversion
 	•	Identify high-potential regions that are currently underperforming
 	•	Prioritize localization, UX improvements, or targeted campaigns based on regional performance
 
