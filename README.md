@@ -3,8 +3,6 @@
 This project visualizes user engagement and conversion patterns using real web session data.  
 It is designed to help identify where major leaks occur in the user journey—from traffic sources to final conversion—and recommend data-driven solutions.
 
----
-
 ## Key Graphs & Insights
 
 ### 1. **Country Conversion Map**
@@ -23,8 +21,6 @@ Analyzes how long users stay on-site before converting.
 Color-coded heatmap of top 10 traffic sources and their performance across devices.  
 **Key insight**: Some sources (e.g., Google Calendar, Outlook) convert well—but mostly on desktop. Mobile/tablet performance is weak across the board.
 
----
-
 ## Business Takeaways
 
 - **Biggest leak**: Drop-off between Browsed and Engaged stages.
@@ -34,8 +30,6 @@ Color-coded heatmap of top 10 traffic sources and their performance across devic
   - Improve mobile and tablet experiences.
   - Customize content for mid-funnel engagement.
   - Prioritize ad spend on high-conversion source-device combos.
-
----
 
 ## Folder Structure
 
@@ -53,8 +47,6 @@ Color-coded heatmap of top 10 traffic sources and their performance across devic
 └── README.md
 ```
 
----
-
 ## Setup & Requirements
 
 - Python 3.10+
@@ -68,18 +60,12 @@ pip install -r requirements.txt
 streamlit run Home.py
 ```
 
----
-
 ## Data Source
 
 Session-level export from Google Analytics  
 Date range: up to **May 13, 2025**  
 Sensitive user info anonymized
 
----
-
 ## License
 
 MIT. Free to use, share, and adapt.
-
----
