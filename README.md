@@ -7,19 +7,23 @@ It is designed to help identify where major leaks occur in the user journey—fr
 
 ### 1. **Country Conversion Map**
 A global choropleth showing conversion rates by country.  
-**Key insight**: While a few markets (like the U.S.) convert above 1–2%, most sit under 0.5%. Investing in these low-performing countries without improving UX could waste resources.
+**Key insight**: While a few markets (like the U.S.) convert above 1–2%, most sit under 0.5%. Investing in these low-performing countries without improving UX could waste resources.  
+![Country Conversion Map](outputs/country_conversion_map.png)
 
 ### 2. **Funnel Waterfall by Device**
 Visualizes where users drop off in the funnel: Browsed → Engaged → Deep Engagement → Converted.  
-**Key insight**: Most sessions drop right after browsing. Only ~10–14% make it to “Deep Engagement,” and nearly 0% convert.
+**Key insight**: Most sessions drop right after browsing. Only ~10–14% make it to “Deep Engagement,” and nearly 0% convert.  
+![Funnel Drop-off](outputs/funnel_dropoff_by_device.png)
 
 ### 3. **Session Duration vs Conversion**
 Analyzes how long users stay on-site before converting.  
-**Key insight**: Visits under 10 seconds rarely convert. Conversion peaks between 10–20 minutes and then plateaus. Keeping users engaged for 5–20 minutes is critical.
+**Key insight**: Visits under 10 seconds rarely convert. Conversion peaks between 10–20 minutes and then plateaus. Keeping users engaged for 5–20 minutes is critical.  
+![Session Duration vs Conversion](outputs/session_duration_vs_conversion.png)
 
 ### 4. **Source × Device Heatmap**
 Color-coded heatmap of top 10 traffic sources and their performance across devices.  
-**Key insight**: Some sources (e.g., Google Calendar, Outlook) convert well—but mostly on desktop. Mobile/tablet performance is weak across the board.
+**Key insight**: Some sources (e.g., Google Calendar, Outlook) convert well—but mostly on desktop. Mobile/tablet performance is weak across the board.  
+![Source Device Heatmap](outputs/source_device_heatmap.png)
 
 ## Business Takeaways
 
@@ -33,7 +37,7 @@ Color-coded heatmap of top 10 traffic sources and their performance across devic
 
 ## Folder Structure
 
-```
+\`\`\`
 silent-leak-detector/
 ├── data/
 │   ├── cleaned_sessions.csv
@@ -56,21 +60,20 @@ silent-leak-detector/
 ├── LICENSE
 ├── README.md
 └── requirements.txt
-
-```
+\`\`\`
 
 ## Setup & Requirements
 
 - Python 3.10+
 - Install dependencies:
-```bash
+\`\`\`bash
 pip install -r requirements.txt
-```
+\`\`\`
 
 - To run the dashboard locally:
-```bash
-streamlit run Home.py
-```
+\`\`\`bash
+streamlit run Homepage.py
+\`\`\`
 
 ## Data Source
 
@@ -80,4 +83,6 @@ Sensitive user info anonymized
 
 ## License
 
-MIT. Free to use, share, and adapt.
+This project is licensed under the MIT License.  
+You are free to use, modify, and distribute it with attribution.  
+See the [LICENSE](LICENSE) file for full terms.
