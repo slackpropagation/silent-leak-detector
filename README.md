@@ -1,6 +1,5 @@
 # Silent Leak Detector: Session Analysis Dashboard
 
-
 ![Version](https://img.shields.io/badge/version-1.0.0-blue) | [MIT License](LICENSE)
 
 **Last Updated:** May 14, 2025
@@ -163,9 +162,6 @@ While a few countries—such as the United States and some Western European mark
 
 **Key Insight:** The United States leads with a 2.30% conversion rate, while most countries convert below 0.5%, highlighting significant regional performance gaps.
 
-**Page Context:**  
-This map is implemented in [pages/Country_Conversion_Map.py](pages/Country_Conversion_Map.py). It filters out countries with fewer than 100 sessions, converts country names to ISO‑3 codes using the `pycountry` library, and renders an interactive Plotly choropleth with an equirectangular projection on a dark background theme (`#2E2E2E`). A custom diverging colorscale highlights performance from low (deep blue) to high (red) rates. A rotated annotation serves as the vertical colorbar label, and footer annotations display total sessions and overall conversion rate. Data is loaded from `data/cleaned_sessions.csv` and the figure can be exported to `outputs/country_conversion_map.png`.
-
 To assess how reliable each country’s conversion rate is, we calculated 95% confidence intervals. This helps distinguish statistically meaningful patterns from noise, especially for countries with fewer sessions.
 
 #### Country Conversion Rates with 95% Confidence Intervals
@@ -194,9 +190,6 @@ This chart helps teams pinpoint which funnel stages and device types need urgent
 ![Funnel Drop-off](outputs/funnel_dropoff_by_device.png)
 
 **Key Insight:** The largest drop-off occurs immediately after the “Browsed” stage, with only 10–14% of sessions reaching “Deep Engagement” and near-zero conversions across devices.
-
-**Page Context:**  
-This funnel waterfall chart is implemented in [pages/Funnel_Dropoff_by_Device.py](pages/Funnel_Dropoff_by_Device.py). It loads `data/cleaned_sessions.csv`, filters sessions into the four key stages (Browsed, Engaged, Deep Engagement, Converted), and aggregates counts by device. Plotly subplots render each device on a separate row with shaded backgrounds. The left axis shows percentage survival on a log scale with guide lines at 0.1%, 1%, 10%, and 100%. The right column presents absolute session counts in a table. Custom shapes, vertical dividers, and a dark theme (`#2E2E2E`) with neon device colors ensure clear visualization.
 
 The following breakdown estimates the total revenue lost at each stage of the funnel by multiplying drop-offs with the average revenue per conversion (~$134). This quantifies the cost of user leakage.
 
@@ -235,9 +228,6 @@ This chart is especially useful for UX and content teams who want to align desig
 
 **Key Insight:** Conversion probability rises sharply in the 10–20 minute window and is nearly zero for sessions under 10 seconds, indicating the critical engagement period.
 
-**Page Context:**  
-This chart is implemented in [pages/Session_Duration_vs_Conversion.py](pages/Session_Duration_vs_Conversion.py). It reads `data/cleaned_sessions.csv`, filters session durations to a realistic range, and assigns each to a duration bucket (e.g., <10s, 10s–1m, 1–5m, 5–20m, >20m). Conversion rates are plotted as lines on the primary y-axis, while session volumes are displayed as semi-transparent bars on the secondary y-axis. Device categories are color-coded, and the layout uses a dark theme (`#2E2E2E`) with footer annotations for data source attribution.
-
 ### 4. **Source × Device Heatmap**
 
 This heatmap breaks down conversion performance across two dimensions:
@@ -263,9 +253,6 @@ By combining both source and device views, this chart offers targeted optimizati
 
 **Key Insight:** Desktop outperforms mobile and tablet across top sources; niche channels like Google Calendar and Outlook show especially strong desktop performance.
 
-**Page Context:**  
-This heatmap is implemented in [pages/Source_x_Device_Heatmap.py](pages/Source_x_Device_Heatmap.py). It loads `data/cleaned_sessions.csv`, pivots conversion rates by traffic source and device, excludes any combinations with 0% conversion, and highlights the top 10 sources by average conversion rate. A custom diverging colorscale and bold cell annotations emphasize performance differences on a dark background. White grid lines and a manual colorbar label ensure clarity, and footer annotations note the data source.
-
 To evaluate performance, we compared your actual device-level conversion rates with public industry benchmarks. This reveals how each platform is performing relative to expected norms.
 
 *(Source: Contentsquare 2024 Benchmark Report)*
@@ -288,18 +275,11 @@ This bar chart shows the average predicted conversion probability for each top t
 
 **Key Insight:** Desktop consistently outperforms mobile and tablet across channels; Facebook on desktop leads at ~65% conversion likelihood, while mobile and tablet rates remain below 5%.
 
-**Page Context:**  
-Implemented in `pages/Top_Sources_by_Conversion_Probability.py` (or the actual filename), this page reads `data/cleaned_sessions.csv`, groups by `source` and `devicecategory`, computes the mean predicted conversion probability, filters out zero-value combinations, and renders a Plotly bar chart with neon-themed device colors.
-
 ### 6. **Top Conversion Candidates**
 
 This interactive table displays the top 10% of sessions ranked by predicted conversion probability. Users can filter by device type, traffic source, and country, and download the filtered list for follow-up actions.
 
 **Key Insight:** 100% of high‑likelihood sessions originate from desktop users, highlighting the critical need to improve mobile and tablet experiences.
-
-**Page Context:**  
-Implemented in [pages/Top_Conversion_Candidates.py](pages/Top_Conversion_Candidates.py), this page loads calibrated XGBoost predictions (`outputs/session_predictions.csv`), uses Plotly and Streamlit widgets for interactive filtering, applies SHAP-based explainability to highlight feature contributions, and provides a download button to export top sessions (`outputs/top_10pct_sessions.csv`).
-
 
 ## Business Takeaways
 
@@ -356,12 +336,10 @@ Design experiments on three critical funnel pages (pricing, signup, checkout) wi
 ### Real-Time Scoring Integration
 Deploy the model as a low-latency API endpoint to score sessions in real time. Trigger personalized follow-up messages when a user’s predicted probability exceeds a defined threshold (e.g., >80%). Monitor conversion lift compared to control groups, targeting a 10–15% improvement through timely engagement.
 
-
 ## Folder Structure
 
 ```
 silent-leak-detector/
-├── .venv/
 ├── data/
 │   ├── cleaned_sessions.csv
 │   ├── engineered_sessions.csv
@@ -391,7 +369,6 @@ silent-leak-detector/
 ├── README.md
 └── requirements.txt
 ```
-
 
 ## License
 
