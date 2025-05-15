@@ -34,7 +34,7 @@ This project provides a data-driven dashboard to analyze and visualize user enga
 - Provide visual insights to support optimization of UX, content strategy, and ad targeting
 
 
-Ultimately, the dashboard acts as a “leak detector”—guiding teams toward practical interventions (like improving mobile UX or tailoring mid-funnel messaging) to maximize conversion and reduce wasted acquisition spend.
+Ultimately, the dashboard acts as a “leak detector”; guiding teams toward practical interventions (like improving mobile UX or tailoring mid-funnel messaging) to maximize conversion and reduce wasted acquisition spend.
 
 ## Executive Summary
 
@@ -156,7 +156,7 @@ The visualization helps teams:
 - Identify high-potential regions that are currently underperforming
 - Prioritize localization, UX improvements, or targeted campaigns based on regional performance
 
-While a few countries—such as the United States and some Western European markets—achieve conversion rates above 1–2%, the majority of global traffic converts at less than 0.5%. This stark contrast suggests that expanding ad spend into low-performing regions without first addressing regional UX barriers (e.g., language, loading time, mobile performance) could lead to poor returns on investment. This visualization supports strategic decision-making around international growth and budget allocation.
+While a few countries; such as the United States and some Western European markets, achieve conversion rates above 1–2%, the majority of global traffic converts at less than 0.5%. This stark contrast suggests that expanding ad spend into low-performing regions without first addressing regional UX barriers (e.g., language, loading time, mobile performance) could lead to poor returns on investment. This visualization supports strategic decision-making around international growth and budget allocation.
 
 ![Country Conversion Map](outputs/country_conversion_map.png)
 
@@ -183,7 +183,7 @@ This graph illustrates the user journey through four progressive stages of engag
 
 The waterfall layout breaks down these stages by device type (desktop, mobile, tablet), showing how many users drop off at each step. This lets teams compare funnel efficiency across platforms.
 
-The steepest drop-off happens immediately after the “Browsed” stage, with a large portion of users bouncing without interacting at all—indicating weak initial hooks or unclear CTAs. Only 10–14% reach the “Deep Engagement” stage, and conversion rates are close to zero across all devices. Mobile and tablet users tend to fall off faster than desktop users, highlighting possible UX friction or slower performance on smaller screens.
+The steepest drop-off happens immediately after the “Browsed” stage, with a large portion of users bouncing without interacting at all; indicating weak initial hooks or unclear CTAs. Only 10–14% reach the “Deep Engagement” stage, and conversion rates are close to zero across all devices. Mobile and tablet users tend to fall off faster than desktop users, highlighting possible UX friction or slower performance on smaller screens.
 
 This chart helps teams pinpoint which funnel stages and device types need urgent attention, so they can prioritize fixes like faster load times, clearer value props, or device-optimized content.
 
@@ -216,9 +216,9 @@ I compared mid-funnel users who failed to convert with those who did. The gap in
 
 This graph explores the relationship between how long a user stays on the site (session duration) and their likelihood to convert. Sessions are grouped into time buckets (e.g., 0–10 seconds, 1–5 minutes, etc.), and the corresponding conversion rate is calculated for each.
 
-The purpose of this visualization is to help identify the optimal engagement window—the amount of time users typically spend before taking action—and where drop-offs or wasted traffic occur.
+The purpose of this visualization is to help identify the optimal engagement window; the amount of time users typically spend before taking action, and where drop-offs or wasted traffic occur.
 
-Sessions lasting less than 10 seconds almost never result in a conversion, suggesting that these users either bounced immediately due to poor first impressions or weren’t the right audience. Conversion rates begin to rise significantly in the 10–20 minute range, peaking during this window and then leveling off or even declining slightly beyond 30 minutes—possibly due to distraction, confusion, or fatigue.
+Sessions lasting less than 10 seconds almost never result in a conversion, suggesting that these users either bounced immediately due to poor first impressions or weren’t the right audience. Conversion rates begin to rise significantly in the 10–20 minute range, peaking during this window and then leveling off or even declining slightly beyond 30 minutes; possibly due to distraction, confusion, or fatigue.
 
 This insight supports the idea that the first 30 seconds should quickly hook users, and the overall experience should aim to sustain engagement for 5–20 minutes. Strategies like guided navigation, interactive elements, and personalized content can help keep users in this high-conversion zone.
 
@@ -243,11 +243,11 @@ This visualization is designed to help answer questions like:
 - Do certain sources work better on desktop vs. mobile?
 - Are there device-specific UX issues that may be suppressing conversion?
  
-Sources like Google Calendar and Outlook—which are often overlooked in attribution—show surprisingly strong conversion rates, especially on desktop. However, the same sources underperform significantly on mobile and tablet, suggesting possible issues like poor responsiveness, slower load times, or misaligned landing pages on smaller screens.
+Sources like Google Calendar and Outlook; which are often overlooked in attribution, show surprisingly strong conversion rates, especially on desktop. However, the same sources underperform significantly on mobile and tablet, suggesting possible issues like poor responsiveness, slower load times, or misaligned landing pages on smaller screens.
 
 The broader trend across the heatmap is that mobile and tablet users convert less frequently regardless of the source, pointing to a systemic issue with the mobile experience. This supports prioritizing device-specific optimizations and tailoring campaigns for the platforms where they perform best.
 
-By combining both source and device views, this chart offers targeted optimization opportunities—such as reallocating spend, adjusting messaging by platform, or improving cross-device consistency.
+By combining both source and device views, this chart offers targeted optimization opportunities; such as reallocating spend, adjusting messaging by platform, or improving cross-device consistency.
 
 ![Source Device Heatmap](outputs/source_device_heatmap.png)
 
@@ -287,12 +287,12 @@ Our analysis reveals critical leaks and high-impact opportunities across the use
 
 ### Major Leak Points
 
-- Biggest leak: The most significant user drop-off occurs immediately after landing—between the “Browsed” and “Engaged” stages. A large portion of sessions end without any meaningful interaction, indicating weak first impressions, unclear CTAs, or misaligned landing page content.
+- Biggest leak: The most significant user drop-off occurs immediately after landing; between the “Browsed” and “Engaged” stages. A large portion of sessions end without any meaningful interaction, indicating weak first impressions, unclear CTAs, or misaligned landing page content.
 
 ### Optimization Goals
 
 - Key engagement window: Focus on retaining users within the 5–20 minute session range, where conversion probability sharply increases. Keeping users engaged for at least 1–2 minutes, and ideally up to 10–20, should be a priority.
-- Use this insight to inform content strategy, interaction design, and onboarding flow—especially on mobile where attention spans are shorter.
+- Use this insight to inform content strategy, interaction design, and onboarding flow; especially on mobile where attention spans are shorter.
 
 ### High-Converting Patterns
 
@@ -306,18 +306,18 @@ These niche sources generate relatively fewer sessions but very high conversion 
 
 - Improve mobile and tablet UX: Address widespread performance gaps across devices. Start by auditing speed, responsiveness, navigation, and form completion on mobile/tablet.
 - Target mid-funnel drop-off: Many users engage briefly but fail to reach “deep engagement.” Strengthen this middle layer with guided flows, product tours, and timely prompts.
-- Refine ad spend strategy: Shift focus toward source-device pairs with strong ROI. Avoid allocating budget to sources that generate volume but yield low engagement or conversions—especially on mobile.
+- Refine ad spend strategy: Shift focus toward source-device pairs with strong ROI. Avoid allocating budget to sources that generate volume but yield low engagement or conversions; especially on mobile.
 
 ## Example Use Cases
 
 ### Personalized Email Campaigns
-Leverage the top 10% of sessions by conversion probability to send targeted emails with dynamic content—such as product recommendations or special offers—within one hour of session end. This approach can double open rates and deliver a 15–25% lift in click-through conversions by engaging users when their interest is highest.
+Leverage the top 10% of sessions by conversion probability to send targeted emails with dynamic content; such as product recommendations or special offers, within one hour of session end. This approach can double open rates and deliver a 15–25% lift in click-through conversions by engaging users when their interest is highest.
 
 ### UX Improvement Testing
 Focus qualitative research (session replay, heatmaps) on high-propensity sessions to uncover friction points across devices. Analyze click patterns, form abandonment steps, and scroll behavior to inform A/B tests that reduce bounce rates by 10–15% and improve mid-funnel progression.
 
 ### Ad Spend Optimization
-Allocate marketing budget toward channels and device types with the highest predicted conversion likelihood—for example, desktop users from Google Search above a 50% probability threshold. By shifting spend to proven high-impact segments, teams can reduce wasted budget by 20–30% and increase overall ROAS.
+Allocate marketing budget toward channels and device types with the highest predicted conversion likelihood; for example, desktop users from Google Search above a 50% probability threshold. By shifting spend to proven high-impact segments, teams can reduce wasted budget by 20–30% and increase overall ROAS.
 
 ### Proactive Live Support
 Integrate real-time scoring into chat or in-app messaging to automatically flag high-propensity sessions and offer live assistance or incentives. Early adopters of this strategy report a 5–10% uplift in conversions by engaging users at peak intent moments.
