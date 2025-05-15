@@ -150,21 +150,28 @@ These niche sources generate relatively fewer sessions but very high conversion 
 
 ```
 silent-leak-detector/
+├── .venv/
 ├── data/
 │   ├── cleaned_sessions.csv
+│   ├── engineered_sessions.csv
 │   └── raw_sessions.csv
 ├── outputs/
 │   ├── country_conversion_map.png
 │   ├── funnel_dropoff_by_device.png
+│   ├── high_confidence_conversions.csv
 │   ├── session_duration_vs_conversion.png
-│   └── source_device_heatmap.png
+│   ├── session_predictions.csv
+│   ├── source_device_heatmap.png
+│   └── top_10pct_sessions.csv
 ├── pages/
 │   ├── Country_Conversion_Map.py
 │   ├── Funnel_Dropoff_by_Device.py
 │   ├── Session_Duration_vs_Conversion.py
-│   └── Source_x_Device_Heatmap.py
+│   ├── Source_x_Device_Heatmap.py
+│   └── Top_Conversion_Candidates.py
 ├── scripts/
-│   └── clean_data.py
+│   ├── clean_data.py
+│   └── xgboost_model.py
 ├── Homepage.py
 ├── leak_analysis.ipynb
 ├── .gitignore
