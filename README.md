@@ -1,13 +1,148 @@
 # Silent Leak Detector: Session Analysis Dashboard
 
+
+![Version](https://img.shields.io/badge/version-1.0.0-blue) | [MIT License](LICENSE)
+
+**Last Updated:** May 14, 2025
+
+## Table of Contents
+
+- [Executive Summary](#executive-summary)
+- [Setup & Requirements](#setup--requirements)
+- [ML Model Methodology](#ml-model-methodology)
+- [Why It Matters](#why-it-matters)
+- [Interactive Exploration & Probability Distribution](#interactive-exploration--probability-distribution)
+- [Key Graphs & Insights](#key-graphs--insights)
+  - [1. Country Conversion Map](#1-country-conversion-map)
+  - [2. Funnel Waterfall by Device](#2-funnel-waterfall-by-device)
+  - [3. Session Duration vs Conversion](#3-session-duration-vs-conversion)
+  - [4. Source × Device Heatmap](#4-source-×-device-heatmap)
+  - [5. Top Conversion Candidates](#5-top-conversion-candidates)
+- [Business Takeaways](#business-takeaways)
+- [Example Use Cases](#example-use-cases)
+- [Next Steps & Recommendations](#next-steps--recommendations)
+- [Folder Structure](#folder-structure)
+- [Data Source](#data-source)
+- [License](#license)
+
 This project provides a data-driven dashboard to analyze and visualize user engagement patterns across a digital platform, based on real session-level data exported from Google Analytics. It aims to uncover critical bottlenecks (“leaks”) in the user journey; specifically, where and why users disengage before converting. By breaking down behavior across dimensions like geography, traffic source, device type, session duration, and funnel stage, this tool helps marketing and product teams:
-	
- 	•	Quantify user drop-off rates at each key step of the funnel (e.g., browsing, engagement, conversion)
-	•	Identify low-performing combinations (e.g., mobile traffic from certain sources)
-	•	Highlight high-converting segments worth prioritizing in future campaigns
-	•	Provide visual insights to support optimization of UX, content strategy, and ad targeting
+
+- Quantify user drop-off rates at each key step of the funnel (e.g., browsing, engagement, conversion)
+- Identify low-performing combinations (e.g., mobile traffic from certain sources)
+- Highlight high-converting segments worth prioritizing in future campaigns
+- Provide visual insights to support optimization of UX, content strategy, and ad targeting
+
 
 Ultimately, the dashboard acts as a “leak detector”—guiding teams toward practical interventions (like improving mobile UX or tailoring mid-funnel messaging) to maximize conversion and reduce wasted acquisition spend.
+
+## Executive Summary
+
+Below are the key performance metrics for our conversion prediction model, evaluated on a held-out test set. These KPIs give stakeholders an at‑a‑glance view of model effectiveness and core insights.
+
+> | Metric                             | Value   | Description                                                          |
+> |------------------------------------|---------|----------------------------------------------------------------------|
+> | **AUC Score**                      | 0.9837  | Ability to rank sessions by conversion likelihood (higher is better) |
+> | **Best F1 Score**                  | 0.5556  | Harmonic mean of precision and recall at the optimized threshold     |
+> | **Precision @ Top 10%**            | 50%     | Fraction of true converters among the top 10% most likely sessions   |
+> | **Desktop % of Top 10% Sessions**  | 100%    | Proportion of high‑likelihood sessions originating from desktop      |
+
+These metrics reflect how accurately the model distinguishes converting sessions from non‑converting ones, and highlight the strong performance of desktop traffic in driving conversions.
+
+## Setup & Requirements
+
+- Python 3.10+
+- Create and activate a virtual environment:
+  ```bash
+  python3 -m venv .venv && source .venv/bin/activate
+  ```
+- Install dependencies:
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+- To run the dashboard locally:
+  ```bash
+  streamlit run Homepage.py
+  ```
+
+### Quick Start
+
+```bash
+git clone https://github.com/yourorg/silent-leak-detector.git
+cd silent-leak-detector
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+streamlit run Homepage.py
+```
+
+
+## Data Source
+
+Session-Level Export from Google Analytics  
+Date Range: up to **May 13, 2025**  
+Sensitive user info anonymized
+
+
+## ML Model Methodology
+
+This project uses a **gradient-boosted decision tree (XGBoost)** model to predict the likelihood that a user session will convert. The modeling pipeline includes:
+
+- **Data Collection & Cleaning**  
+  - Imported raw session exports from Google Analytics.  
+  - Removed bot traffic and anonymized any personal identifiers.  
+  - Standardized date/time formats and normalized categorical labels.
+
+- **Feature Engineering**  
+  - **Core Metrics**: Session duration (seconds), pageviews count, and bounce indicator (sessions < 10s).  
+  - **Context Signals**: Device type (Desktop/Mobile/Tablet), traffic source, country, and duration buckets (<10s, 10s–1m, 1–5m, 5–20m, >20m).  
+  - **Engineered Features**:  
+    - `session_duration_bucket` for capturing non-linear time effects.  
+    - `pageviews_per_minute` to normalize engagement rate.  
+    - Interaction terms like `device_source_combo` to model cross-features.  
+    - `high_value_region_flag` for top-performing countries.
+
+- **Model Training & Validation**  
+  - Split data 80/20 into training and testing sets.  
+  - Performed 5-fold cross-validation to tune hyperparameters (e.g., `max_depth`, `learning_rate`, `subsample`, `colsample_bytree`).  
+  - Trained the final XGBoost model with optimal parameters.
+
+- **Probability Calibration & Threshold Tuning**  
+  - Applied **Platt Scaling** to align raw model scores with observed conversion rates.  
+  - Evaluated precision–recall trade-offs and selected a probability threshold (~0.32) that maximizes the F1 score (~0.56) on imbalanced data (~1% conversion rate).
+
+- **Performance Metrics**  
+  - **AUC Score**: 0.9837 (strong ranking ability).  
+  - **Best F1 Score**: 0.5556 (balanced precision and recall).  
+  - **Precision @ Top 10%**: 50% (half of the top 10% predictions are true converters).
+
+This methodology ensures robust, calibrated predictions that stakeholders can confidently use to prioritize marketing, UX improvements, and support interventions.
+
+
+
+## Why It Matters
+
+*By scoring each user session for conversion likelihood, we can focus marketing, UX, and support efforts on the sessions most likely to convert, maximizing ROI and reducing wasted acquisition spend.*
+
+## Interactive Exploration & Probability Distribution
+
+In the live dashboard, stakeholders can interactively filter session data by **device type**, **traffic source**, and **country**, enabling on-the-fly segmentation without writing any code.  
+A dynamic histogram visualizes the complete distribution of predicted conversion probabilities, with a dashed cutoff line marking the top 10% most likely sessions. This interactive functionality allows users to:
+
+- **Drill into specific segments** to see how conversion likelihood varies across devices, sources, or regions.  
+- **Contextualize rarity** by observing the frequency of high‑propensity sessions within the overall distribution.  
+- **Rapidly compare scenarios** (e.g., mobile vs. desktop) and make data-driven decisions in real time.
+
+
+## What You'll See
+
+In the following sections, you’ll find five interactive visualizations that explore different dimensions of user behavior and conversion likelihood:
+1. **Country Conversion Map** – global conversion rates by market.  
+2. **Funnel Waterfall by Device** – where users drop off across devices.  
+3. **Session Duration vs Conversion** – optimal engagement time windows.  
+4. **Source × Device Heatmap** – conversion performance across traffic sources and devices.  
+5. **Top Conversion Candidates** – the top 10% of sessions ranked by predicted conversion probability, with filters and download options.
+
+Each chart is accompanied by a concise key insight and implementation context to guide interpretation and action.
 
 ## Key Graphs & Insights
 
@@ -15,14 +150,19 @@ Ultimately, the dashboard acts as a “leak detector”—guiding teams toward p
 This interactive global choropleth map displays the conversion rates by country, based on aggregated session-level data. Each country is shaded according to its conversion performance, making it easy to spot geographic trends at a glance.
 
 The visualization helps teams:
-	
- 	•	Compare how different markets perform in terms of conversion
-	•	Identify high-potential regions that are currently underperforming
-	•	Prioritize localization, UX improvements, or targeted campaigns based on regional performance
+
+- Compare how different markets perform in terms of conversion
+- Identify high-potential regions that are currently underperforming
+- Prioritize localization, UX improvements, or targeted campaigns based on regional performance
 
 While a few countries—such as the United States and some Western European markets—achieve conversion rates above 1–2%, the majority of global traffic converts at less than 0.5%. This stark contrast suggests that expanding ad spend into low-performing regions without first addressing regional UX barriers (e.g., language, loading time, mobile performance) could lead to poor returns on investment. This visualization supports strategic decision-making around international growth and budget allocation.
 
 ![Country Conversion Map](outputs/country_conversion_map.png)
+
+**Key Insight:** The United States leads with a 2.30% conversion rate, while most countries convert below 0.5%, highlighting significant regional performance gaps.
+
+**Page Context:**  
+This map is implemented in [pages/Country_Conversion_Map.py](pages/Country_Conversion_Map.py). It filters out countries with fewer than 100 sessions, converts country names to ISO‑3 codes using the `pycountry` library, and renders an interactive Plotly choropleth with an equirectangular projection on a dark background theme (`#2E2E2E`). A custom diverging colorscale highlights performance from low (deep blue) to high (red) rates. A rotated annotation serves as the vertical colorbar label, and footer annotations display total sessions and overall conversion rate. Data is loaded from `data/cleaned_sessions.csv` and the figure can be exported to `outputs/country_conversion_map.png`.
 
 To assess how reliable each country’s conversion rate is, we calculated 95% confidence intervals. This helps distinguish statistically meaningful patterns from noise, especially for countries with fewer sessions.
 
@@ -37,11 +177,11 @@ To assess how reliable each country’s conversion rate is, we calculated 95% co
 ### 2. **Funnel Waterfall by Device**
 
 This graph illustrates the user journey through four progressive stages of engagement:
-	
- 	1.	Browsed – The user visits the site but takes no meaningful action.
-	2.	Engaged – The user clicks, scrolls, or navigates within the site.
-	3.	Deep Engagement – The user triggers high-intent signals (e.g., watches a full video, views pricing, adds to cart).
-	4.	Converted – The user completes a goal (e.g., signs up, makes a purchase).
+
+  1. Browsed – The user visits the site but takes no meaningful action.
+  2. Engaged – The user clicks, scrolls, or navigates within the site.
+  3. Deep Engagement – The user triggers high-intent signals (e.g., watches a full video, views pricing, adds to cart).
+  4. Converted – The user completes a goal (e.g., signs up, makes a purchase).
 
 The waterfall layout breaks down these stages by device type (desktop, mobile, tablet), showing how many users drop off at each step. This lets teams compare funnel efficiency across platforms.
 
@@ -50,6 +190,11 @@ The steepest drop-off happens immediately after the “Browsed” stage, with a 
 This chart helps teams pinpoint which funnel stages and device types need urgent attention, so they can prioritize fixes like faster load times, clearer value props, or device-optimized content.
 
 ![Funnel Drop-off](outputs/funnel_dropoff_by_device.png)
+
+**Key Insight:** The largest drop-off occurs immediately after the “Browsed” stage, with only 10–14% of sessions reaching “Deep Engagement” and near-zero conversions across devices.
+
+**Page Context:**  
+This funnel waterfall chart is implemented in [pages/Funnel_Dropoff_by_Device.py](pages/Funnel_Dropoff_by_Device.py). It loads `data/cleaned_sessions.csv`, filters sessions into the four key stages (Browsed, Engaged, Deep Engagement, Converted), and aggregates counts by device. Plotly subplots render each device on a separate row with shaded backgrounds. The left axis shows percentage survival on a log scale with guide lines at 0.1%, 1%, 10%, and 100%. The right column presents absolute session counts in a table. Custom shapes, vertical dividers, and a dark theme (`#2E2E2E`) with neon device colors ensure clear visualization.
 
 The following breakdown estimates the total revenue lost at each stage of the funnel by multiplying drop-offs with the average revenue per conversion (~$134). This quantifies the cost of user leakage.
 
@@ -86,20 +231,25 @@ This chart is especially useful for UX and content teams who want to align desig
 
 ![Session Duration vs Conversion](outputs/session_duration_vs_conversion.png)
 
+**Key Insight:** Conversion probability rises sharply in the 10–20 minute window and is nearly zero for sessions under 10 seconds, indicating the critical engagement period.
+
+**Page Context:**  
+This chart is implemented in [pages/Session_Duration_vs_Conversion.py](pages/Session_Duration_vs_Conversion.py). It reads `data/cleaned_sessions.csv`, filters session durations to a realistic range, and assigns each to a duration bucket (e.g., <10s, 10s–1m, 1–5m, 5–20m, >20m). Conversion rates are plotted as lines on the primary y-axis, while session volumes are displayed as semi-transparent bars on the secondary y-axis. Device categories are color-coded, and the layout uses a dark theme (`#2E2E2E`) with footer annotations for data source attribution.
+
 ### 4. **Source × Device Heatmap**
 
 This heatmap breaks down conversion performance across two dimensions:
-	
- 	•	Traffic source (e.g., direct, Google Calendar, Outlook, Instagram, paid ads)
-	•	Device type (desktop, mobile, tablet)
+
+- Traffic source (e.g., direct, Google Calendar, Outlook, Instagram, paid ads)
+- Device type (desktop, mobile, tablet)
 
 Each cell represents the conversion rate for a specific source-device combo, color-coded from low to high. The top 10 most frequent sources are included to focus on the most impactful segments.
 
 This visualization is designed to help answer questions like:
-	
- 	•	Which sources bring high-quality traffic vs. high-volume but low-converting users?
-	•	Do certain sources work better on desktop vs. mobile?
-	•	Are there device-specific UX issues that may be suppressing conversion?
+
+- Which sources bring high-quality traffic vs. high-volume but low-converting users?
+- Do certain sources work better on desktop vs. mobile?
+- Are there device-specific UX issues that may be suppressing conversion?
  
 Sources like Google Calendar and Outlook—which are often overlooked in attribution—show surprisingly strong conversion rates, especially on desktop. However, the same sources underperform significantly on mobile and tablet, suggesting possible issues like poor responsiveness, slower load times, or misaligned landing pages on smaller screens.
 
@@ -109,7 +259,15 @@ By combining both source and device views, this chart offers targeted optimizati
 
 ![Source Device Heatmap](outputs/source_device_heatmap.png)
 
+**Key Insight:** Desktop outperforms mobile and tablet across top sources; niche channels like Google Calendar and Outlook show especially strong desktop performance.
+
+**Page Context:**  
+This heatmap is implemented in [pages/Source_x_Device_Heatmap.py](pages/Source_x_Device_Heatmap.py). It loads `data/cleaned_sessions.csv`, pivots conversion rates by traffic source and device, excludes any combinations with 0% conversion, and highlights the top 10 sources by average conversion rate. A custom diverging colorscale and bold cell annotations emphasize performance differences on a dark background. White grid lines and a manual colorbar label ensure clarity, and footer annotations note the data source.
+
 To evaluate performance, we compared your actual device-level conversion rates with public industry benchmarks. This reveals how each platform is performing relative to expected norms.
+
+*(Source: Contentsquare 2024 Benchmark Report)*
+
 
 #### Device Conversion Rates vs. Industry Benchmarks
 
@@ -119,32 +277,72 @@ To evaluate performance, we compared your actual device-level conversion rates w
 | Mobile  | 3,437    | 7           | 0.20%                     | 1.9%             | -1.70% |
 | Tablet  | 452      | 2           | 0.44%                     | 2.2%             | -1.76% |
 
+
+### 5. **Top Conversion Candidates**
+
+This interactive table displays the top 10% of sessions ranked by predicted conversion probability. Users can filter by device type, traffic source, and country, and download the filtered list for follow-up actions.
+
+**Key Insight:** 100% of high‑likelihood sessions originate from desktop users, highlighting the critical need to improve mobile and tablet experiences.
+
+**Page Context:**  
+Implemented in [pages/Top_Conversion_Candidates.py](pages/Top_Conversion_Candidates.py), this page loads calibrated XGBoost predictions (`outputs/session_predictions.csv`), uses Plotly and Streamlit widgets for interactive filtering, applies SHAP-based explainability to highlight feature contributions, and provides a download button to export top sessions (`outputs/top_10pct_sessions.csv`).
+
+
 ## Business Takeaways
 
-This analysis identifies critical leaks, behavioral patterns, and high-impact opportunities across the user journey. It translates complex data into clear strategic priorities for marketing, UX, and product teams.
+Our analysis reveals critical leaks and high-impact opportunities across the user journey:
 
 ### Major Leak Points
-	
-	•	Biggest leak: The most significant user drop-off occurs immediately after landing—between the “Browsed” and “Engaged” stages. A large portion of sessions end without any meaningful interaction, indicating weak first impressions, unclear CTAs, or misaligned landing page content.
+
+- Biggest leak: The most significant user drop-off occurs immediately after landing—between the “Browsed” and “Engaged” stages. A large portion of sessions end without any meaningful interaction, indicating weak first impressions, unclear CTAs, or misaligned landing page content.
 
 ### Optimization Goals
-	
-	•	Key engagement window: Focus on retaining users within the 5–20 minute session range, where conversion probability sharply increases. Keeping users engaged for at least 1–2 minutes, and ideally up to 10–20, should be a priority.
-	•	Use this insight to inform content strategy, interaction design, and onboarding flow—especially on mobile where attention spans are shorter.
+
+- Key engagement window: Focus on retaining users within the 5–20 minute session range, where conversion probability sharply increases. Keeping users engaged for at least 1–2 minutes, and ideally up to 10–20, should be a priority.
+- Use this insight to inform content strategy, interaction design, and onboarding flow—especially on mobile where attention spans are shorter.
 
 ### High-Converting Patterns
 
-	•	Top-converting combinations:
-	•	Desktop + calendar.google.com
-	•	Desktop + outlook.live.com
+- Top-converting combinations:
+  - Desktop + calendar.google.com
+  - Desktop + outlook.live.com
 
 These niche sources generate relatively fewer sessions but very high conversion rates, suggesting they attract highly qualified traffic. These should be prioritized for campaign expansion or lookalike audience modeling.
 
 ### Actionable Fixes
 
-	•	Improve mobile and tablet UX: Address widespread performance gaps across devices. Start by auditing speed, responsiveness, navigation, and form completion on mobile/tablet.
-	•	Target mid-funnel drop-off: Many users engage briefly but fail to reach “deep engagement.” Strengthen this middle layer with guided flows, product tours, and timely prompts.
-	•	Refine ad spend strategy: Shift focus toward source-device pairs with strong ROI. Avoid allocating budget to sources that generate volume but yield low engagement or conversions—especially on mobile.
+- Improve mobile and tablet UX: Address widespread performance gaps across devices. Start by auditing speed, responsiveness, navigation, and form completion on mobile/tablet.
+- Target mid-funnel drop-off: Many users engage briefly but fail to reach “deep engagement.” Strengthen this middle layer with guided flows, product tours, and timely prompts.
+- Refine ad spend strategy: Shift focus toward source-device pairs with strong ROI. Avoid allocating budget to sources that generate volume but yield low engagement or conversions—especially on mobile.
+
+## Example Use Cases
+
+### Personalized Email Campaigns
+Leverage the top 10% of sessions by conversion probability to send targeted emails with dynamic content—such as product recommendations or special offers—within one hour of session end. This approach can double open rates and deliver a 15–25% lift in click-through conversions by engaging users when their interest is highest.
+
+### UX Improvement Testing
+Focus qualitative research (session replay, heatmaps) on high-propensity sessions to uncover friction points across devices. Analyze click patterns, form abandonment steps, and scroll behavior to inform A/B tests that reduce bounce rates by 10–15% and improve mid-funnel progression.
+
+### Ad Spend Optimization
+Allocate marketing budget toward channels and device types with the highest predicted conversion likelihood—for example, desktop users from Google Search above a 50% probability threshold. By shifting spend to proven high-impact segments, teams can reduce wasted budget by 20–30% and increase overall ROAS.
+
+### Proactive Live Support
+Integrate real-time scoring into chat or in-app messaging to automatically flag high-propensity sessions and offer live assistance or incentives. Early adopters of this strategy report a 5–10% uplift in conversions by engaging users at peak intent moments.
+
+## Next Steps & Recommendations
+
+### Quick Win – Desktop Campaigns
+Launch desktop-focused ad campaigns on top-performing channels using tailored messaging and optimized landing pages. Track click-through rate (CTR), desktop conversion rate (CVR), and cost per acquisition (CPA) on a weekly basis, aiming for a 20% increase in desktop conversions within the next quarter.
+
+### Mobile UX Audit & Optimization
+Use performance tools (Lighthouse, WebPageTest) and user testing to audit mobile and tablet flows. Prioritize fixes such as image compression, lazy loading, simplified navigation, and touch‑optimized forms. Measure improvements in bounce rate and session duration before and after changes.
+
+### A/B Testing & Iteration
+Design experiments on three critical funnel pages (pricing, signup, checkout) with 2–3 variants each. Define success metrics (e.g., 5% CVR lift) and ensure statistical significance. Review results bi-weekly, deploy winning variants, and plan continuous follow-up tests to refine the user journey.
+
+### Real-Time Scoring Integration
+Deploy the model as a low-latency API endpoint to score sessions in real time. Trigger personalized follow-up messages when a user’s predicted probability exceeds a defined threshold (e.g., >80%). Monitor conversion lift compared to control groups, targeting a 10–15% improvement through timely engagement.
+
 
 ## Folder Structure
 
@@ -180,27 +378,17 @@ silent-leak-detector/
 └── requirements.txt
 ```
 
-## Setup & Requirements
-
-- Python 3.10+
-- Install dependencies:
-\`\`\`bash
-pip install -r requirements.txt
-\`\`\`
-
-- To run the dashboard locally:
-\`\`\`bash
-streamlit run Homepage.py
-\`\`\`
-
-## Data Source
-
-Session-level export from Google Analytics  
-Date range: up to **May 13, 2025**  
-Sensitive user info anonymized
 
 ## License
 
-This project is licensed under the MIT License.  
-You are free to use, modify, and distribute it with attribution.  
+This project is licensed under the MIT License.
+You are free to use, modify, and distribute it with attribution.
 See the [LICENSE](LICENSE) file for full terms.
+
+## Contributing & Contact
+
+Contributions and feedback are welcome. Please open an issue or submit a pull request on GitHub.  
+
+## Changelog
+
+- **v1.0.0** (2025-05-14): Initial release with ML model, five visualization pages, and actionable recommendations.

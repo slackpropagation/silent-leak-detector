@@ -220,5 +220,14 @@ fig.add_annotation(
 
 # ── Render funnel drop-off figure in Streamlit ─────────────────────────────────
 # Displays the funnel stage drop-off by device with survival percentages and session counts.
+
 st.plotly_chart(fig, use_container_width=True)
+
+# Page context and implementation details
+st.markdown("""
+#### **Graph Context**
+This visualization is implemented in `pages/Funnel_Dropoff_by_Device.py`. It analyzes session-level data from `data/cleaned_sessions.csv`, filtering for the four funnel stages: Browsed, Engaged, Deep Engagement, and Converted.  
+Using Plotly subplots, it renders a log-scale survival curve for each device (desktop, tablet, mobile) alongside a styled table of absolute session counts and survival percentages.  
+The page applies a dark theme (`#2E2E2E`), custom device colors, and background shading per subplot. Guide lines mark 0.1%, 1%, 10%, and 100% survival, with vertical dividers for each stage. Footer annotations include data source and aggregate metrics for quick reference.
+""")
 

@@ -85,7 +85,13 @@ fig.update_layout(
     font=FONT,
     # Bar mode and legend positioning
     barmode="group",
-    legend=dict(orientation="h", y=1.1, x=0.5, xanchor="center"),
+    legend=dict(
+        orientation="h",
+        y=1.02,
+        x=0.5,
+        xanchor="center",
+        yanchor="bottom"
+    ),
     # Margins
     margin=dict(t=80, l=60, r=60, b=60),
     # X-axis styling
@@ -134,3 +140,11 @@ fig.add_annotation(
 )
 
 st.plotly_chart(fig, use_container_width=True, key="Session_Duration_vs_Conversion")
+
+# Page context and implementation details
+st.markdown("""
+#### **Graph Context**
+This chart is implemented in `pages/Session_Duration_vs_Conversion.py`. It loads cleaned session data from `data/cleaned_sessions.csv`, filters sessions to a realistic range (1–3600 seconds), and assigns each to duration buckets (e.g., <10s, 10–60s, 1–3m, etc.).  
+Conversion rates are plotted as lines on the primary y-axis, while session volumes appear as semi-transparent bars on the secondary y-axis.  
+Device categories (Desktop, Mobile, Tablet) are color-coded via the `DEVICE_COLORS` dictionary. The layout uses a dark theme (`#2E2E2E`) and includes footer annotations for data source attribution.  
+""")

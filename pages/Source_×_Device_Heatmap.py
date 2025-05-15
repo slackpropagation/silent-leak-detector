@@ -191,3 +191,10 @@ fig.add_annotation(
 
 # ── 5️⃣ Render ───────────────────────────────────────────
 st.plotly_chart(fig, use_container_width=True, key="source_device_heatmap")
+
+# Page context and implementation details
+st.markdown("""
+#### **Graph Context**
+This heatmap is implemented in `pages/Source_×_Device_Heatmap.py`. It loads cleaned session data from `data/cleaned_sessions.csv`, pivots conversion rates by traffic source and device category, excludes any source-device combinations with 0% conversion, and highlights the top 10 sources by average conversion rate.  
+A custom diverging colorscale and bold cell annotations emphasize performance differences on a dark background (`PAPER_BG`). White grid lines and a manual vertical colorbar label ensure clear cell delineation and context. Footer annotations display the data source and attribution.
+""")

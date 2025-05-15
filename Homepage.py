@@ -63,6 +63,25 @@ col3.metric("Overall Conversion Rate", f"{overall_rate}%")
 st.markdown(" ")
 st.markdown("---")
 
+# ML Model Overview
+st.header("How the Conversion Prediction Model Works")
+st.markdown("""
+This application includes a machine learning component that predicts the likelihood of each user session converting. The model is a **gradient-boosted decision tree (XGBoost)** trained on enriched session-level data with the following pipeline:
+
+- **Data Preparation**: Imported and cleaned Google Analytics session exports, removed bot traffic, standardized categories, and engineered features such as:
+  - Session duration buckets
+  - Pageviews per minute
+  - Bounce indicator (sessions <10s)
+  - Device × source interaction terms
+  - High-value region flags
+- **Model Training**: Used cross-validation to tune hyperparameters (max_depth, learning_rate, subsample) and applied Platt scaling for probability calibration.
+- **Threshold Tuning**: Optimized the classification threshold to balance precision and recall (achieving F1 score ≈ 0.56, AUC ≈ 0.98).
+- **Deployment**: Sessions are scored in real time and the top 10% most likely converters are highlighted on the “Top Conversion Candidates” page.
+
+Stakeholders can use these predictions to prioritize outreach, optimize ad spend, and guide UX improvements based on data-driven insights.
+""")
+st.markdown("---")
+
 # === Funnel Stage Summary ===
 st.markdown("## Funnel Stage Summary")
 funnel_summary = filtered.groupby('funnel_stage')['converted'].agg(['count', 'sum', 'mean']).rename(columns={

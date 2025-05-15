@@ -1,0 +1,201 @@
+index,devicecategory,source,country,session_bin,device_source_combo,pageviews,timeonsite,is_bounce,pageviews_per_minute,high_value_region,user_id,session_id,p_conversion,converted,top_10pct_flag
+2017,desktop,(direct),United States,>20m,desktop_(direct),26.0,1423.0,0,1.096275428126124,1,,,0.79441375,1,1
+7958,desktop,(direct),United States,>20m,desktop_(direct),48.0,2305.0,0,1.2494576681269156,1,,,0.73118204,1,1
+5612,desktop,facebook.com,United States,5–20m,desktop_facebook.com,23.0,761.0,0,1.8134032735818708,1,,,0.654148,0,1
+5625,desktop,google,United States,5–20m,desktop_google,24.0,1171.0,0,1.2297181265729398,1,,,0.652936,1,1
+7937,desktop,(direct),United States,5–20m,desktop_(direct),21.0,664.0,0,1.8975901899767904,1,,,0.64349186,0,1
+4767,desktop,(direct),United States,5–20m,desktop_(direct),13.0,660.0,0,1.1818180743801752,1,,,0.6310876,1,1
+5641,desktop,(direct),United States,>20m,desktop_(direct),40.0,1325.0,0,1.811320672694913,1,,,0.6264102,0,1
+5541,desktop,(direct),United States,5–20m,desktop_(direct),14.0,481.0,0,1.7463615285203915,1,,,0.60166323,1,1
+7944,desktop,google,United States,>20m,desktop_google,30.0,1304.0,0,1.3803680346456424,1,,,0.6003624,0,1
+2011,desktop,(direct),United States,5–20m,desktop_(direct),24.0,798.0,0,1.8045111425179592,1,,,0.56105214,0,1
+4762,desktop,(direct),United States,5–20m,desktop_(direct),14.0,320.0,0,2.6249995078125923,1,,,0.5133741,1,1
+1970,desktop,(direct),United States,5–20m,desktop_(direct),14.0,321.0,0,2.616821940780946,1,,,0.5133741,0,1
+2001,desktop,(direct),United States,1–5m,desktop_(direct),17.0,255.0,0,3.9999990588237506,1,,,0.48687404,0,1
+1990,desktop,(direct),United States,5–20m,desktop_(direct),20.0,950.0,0,1.2631578149584537,1,,,0.46368003,0,1
+7952,desktop,google,United States,5–20m,desktop_google,40.0,818.0,0,2.933985114866618,1,,,0.36718974,1,1
+5609,tablet,google,United States,5–20m,tablet_google,19.0,1102.0,0,1.0344827022967675,1,,,0.35883346,1,1
+1995,desktop,(direct),United States,>20m,desktop_(direct),22.0,1824.0,0,0.723684186720915,1,,,0.34778893,1,1
+58,desktop,(direct),United States,5–20m,desktop_(direct),21.0,308.0,0,4.090908293978903,1,,,0.32240075,1,1
+7827,desktop,google,United States,>20m,desktop_google,15.0,2510.0,0,0.3585657284805005,1,,,0.2749602,0,1
+7956,desktop,google,United States,>20m,desktop_google,56.0,4778.0,0,0.7032230970712879,1,,,0.23389396,0,1
+1983,desktop,(direct),United States,>20m,desktop_(direct),18.0,1226.0,0,0.8809134968557831,1,,,0.21296135,0,1
+1940,desktop,(direct),United States,1–5m,desktop_(direct),13.0,222.0,0,3.513512563915523,1,,,0.20199096,1,1
+7925,desktop,(direct),United States,>20m,desktop_(direct),18.0,1458.0,0,0.7407407102575839,1,,,0.15296282,0,1
+7773,mobile,google,United States,5–20m,mobile_google,13.0,767.0,0,1.0169490729896424,1,,,0.1520029,0,1
+5617,desktop,google,United States,1–5m,desktop_google,14.0,246.0,0,3.41463331350407,1,,,0.14497545,0,1
+39,desktop,google,United States,5–20m,desktop_google,24.0,542.0,0,2.656826274152073,1,,,0.1381392,0,1
+4796,desktop,(direct),United States,5–20m,desktop_(direct),13.0,356.0,0,2.1910108666835617,1,,,0.1370948,0,1
+2015,desktop,youtube.com,United States,5–20m,desktop_youtube.com,22.0,541.0,0,2.439925792244829,1,,,0.13614991,0,1
+5631,desktop,google,United States,5–20m,desktop_google,24.0,585.0,0,2.461538209073004,1,,,0.12585823,0,1
+5589,desktop,google,United States,5–20m,desktop_google,16.0,1103.0,0,0.8703535337976318,1,,,0.124213316,0,1
+1937,mobile,google,United States,>20m,mobile_google,13.0,1307.0,0,0.5967865066509637,1,,,0.10870848,0,1
+1964,desktop,(direct),United States,>20m,desktop_(direct),16.0,1257.0,0,0.7637231139034313,1,,,0.10832991,1,1
+4815,desktop,youtube.com,United States,5–20m,desktop_youtube.com,15.0,333.0,0,2.7027022157293303,1,,,0.10548063,0,1
+5586,desktop,google,United States,5–20m,desktop_google,15.0,770.0,0,1.1688310777534223,1,,,0.10135726,0,1
+7895,desktop,(direct),United States,5–20m,desktop_(direct),16.0,442.0,0,2.171945406523248,1,,,0.09522834,0,1
+9,mobile,google,United States,5–20m,mobile_google,16.0,594.0,0,1.6161614529129846,1,,,0.09233218,1,1
+4779,desktop,(direct),United States,5–20m,desktop_(direct),12.0,1156.0,0,0.622837337915017,1,,,0.07579641,0,1
+5598,desktop,google,United States,1–5m,desktop_google,17.0,247.0,0,4.129553652740004,1,,,0.074608594,0,1
+7784,desktop,google,United States,5–20m,desktop_google,12.0,731.0,0,0.9849520395388204,1,,,0.072921336,0,1
+1958,desktop,(direct),United States,5–20m,desktop_(direct),14.0,365.0,0,2.301369484706386,1,,,0.07281424,0,1
+1,tablet,(direct),United States,>20m,tablet_(direct),15.0,1448.0,0,0.6215469355712595,1,,,0.054656938,0,1
+5591,mobile,google,United States,>20m,mobile_google,17.0,1233.0,0,0.8272505680170039,1,,,0.05069519,0,1
+56,desktop,google,United States,5–20m,desktop_google,18.0,400.0,0,2.6999995950000604,1,,,0.047132596,0,1
+1938,desktop,(direct),United States,5–20m,desktop_(direct),13.0,414.0,0,1.8840576979626524,1,,,0.045647528,0,1
+70,mobile,(direct),United States,>20m,mobile_(direct),58.0,1554.0,0,2.239382152919608,1,,,0.03639749,0,1
+7924,mobile,google,United States,5–20m,mobile_google,27.0,405.0,0,3.999999407407495,1,,,0.031784542,0,1
+1913,desktop,google,United States,5–20m,desktop_google,13.0,442.0,0,1.764705642800139,1,,,0.031035807,0,1
+7875,desktop,(direct),United States,1–5m,desktop_(direct),14.0,164.0,0,5.121949345628288,1,,,0.028804444,0,1
+7871,desktop,(direct),United States,1–5m,desktop_(direct),15.0,186.0,0,4.838708116545768,1,,,0.026727237,1,1
+4771,mobile,(direct),United States,5–20m,mobile_(direct),12.0,1159.0,0,0.621225161972813,1,,,0.025455328,0,1
+7918,desktop,google,United States,5–20m,desktop_google,19.0,419.0,0,2.720763333542243,1,,,0.025333583,0,1
+7874,desktop,google,United States,1–5m,desktop_google,13.0,274.0,0,2.84671470509897,1,,,0.022122154,0,1
+4775,desktop,(direct),United States,5–20m,desktop_(direct),12.0,419.0,0,1.7183768422372063,1,,,0.02196664,0,1
+7868,desktop,google,United States,5–20m,desktop_google,14.0,440.0,0,1.909090648760366,1,,,0.021725265,0,1
+5574,mobile,google,United States,1–5m,mobile_google,12.0,222.0,0,3.243242366691252,1,,,0.021274928,0,1
+5585,desktop,google,United States,5–20m,desktop_google,14.0,405.0,0,2.0740737668038864,1,,,0.020415558,0,1
+64,desktop,(direct),Other,5–20m,desktop_(direct),26.0,1028.0,0,1.5175096390558576,0,,,0.014822921,0,1
+2005,desktop,(direct),France,5–20m,desktop_(direct),17.0,308.0,0,3.3116876665543504,0,,,0.013694198,0,1
+7794,mobile,google,United States,5–20m,mobile_google,12.0,317.0,0,2.2712929454966035,1,,,0.012753753,1,1
+7767,mobile,(direct),United States,5–20m,mobile_(direct),13.0,428.0,0,1.8224296510612636,1,,,0.012437172,0,1
+2014,mobile,(direct),United States,5–20m,mobile_(direct),20.0,458.0,0,2.6200869930017037,1,,,0.012237051,0,1
+2019,mobile,(direct),United States,5–20m,mobile_(direct),20.0,456.0,0,2.631578601108079,1,,,0.011532373,0,1
+5535,desktop,(direct),Other,1–5m,desktop_(direct),13.0,286.0,0,2.7272721551177295,0,,,0.011395873,0,1
+5619,mobile,google,United States,5–20m,mobile_google,15.0,387.0,0,2.325581034793638,1,,,0.011201863,0,1
+7963,desktop,google,Canada,>20m,desktop_google,59.0,1421.0,0,2.491203272714851,1,,,0.011071476,0,1
+7941,desktop,google,Germany,5–20m,desktop_google,33.0,565.0,0,3.504424406609798,0,,,0.010696437,0,1
+7904,desktop,Partners,India,5–20m,desktop_Partners,19.0,646.0,0,1.7647057184483852,0,,,0.010309254,0,1
+1982,desktop,(direct),Canada,5–20m,desktop_(direct),18.0,1051.0,0,1.027592710127914,1,,,0.010181199,0,1
+4792,mobile,youtube.com,United States,5–20m,mobile_youtube.com,16.0,332.0,0,2.891565742488119,1,,,0.007948511,0,1
+7782,mobile,google,United States,5–20m,mobile_google,12.0,434.0,0,1.6589859457623115,1,,,0.0071400134,0,1
+2063,desktop,youtube.com,Other,>20m,desktop_youtube.com,59.0,2080.0,0,1.7019230278291435,0,,,0.0061492724,0,1
+4778,desktop,(direct),Other,>20m,desktop_(direct),13.0,1814.0,0,0.4299889604193287,0,,,0.0054876423,0,1
+5569,desktop,google,United States,1–5m,desktop_google,13.0,210.0,0,3.714284653061528,1,,,0.0052193087,0,1
+4680,mobile,(direct),United States,5–20m,mobile_(direct),10.0,507.0,0,1.18343181261162,1,,,0.0051765414,0,1
+7919,mobile,google,Canada,5–20m,mobile_google,25.0,332.0,0,4.518071472637685,1,,,0.0040312046,0,1
+57,desktop,(direct),Other,5–20m,desktop_(direct),22.0,460.0,0,2.8695648431002376,0,,,0.0036484648,0,1
+7858,desktop,google,United States,1–5m,desktop_google,12.0,134.0,0,5.373131922478243,1,,,0.0035139234,0,1
+4816,mobile,(direct),Canada,5–20m,mobile_(direct),12.0,886.0,0,0.8126410284893208,1,,,0.0032747781,1,1
+1932,desktop,analytics.google.com,Other,>20m,desktop_analytics.google.com,13.0,1220.0,0,0.639344230851923,0,,,0.0032556558,0,1
+7886,mobile,(direct),United States,5–20m,mobile_(direct),19.0,390.0,0,2.9230764733728503,1,,,0.0029625767,0,1
+5580,mobile,google,Other,1–5m,mobile_google,13.0,233.0,0,3.3476386229256763,0,,,0.0029396173,0,1
+1994,desktop,(direct),Taiwan,>20m,desktop_(direct),21.0,1444.0,0,0.8725761410286922,0,,,0.0028523807,0,1
+7173,desktop,google,United States,>20m,desktop_google,3.0,1603.0,0,0.1122894530646493,1,,,0.002740913,0,1
+3616,desktop,youtube.com,United States,5–20m,desktop_youtube.com,2.0,603.0,0,0.19900495532289,1,,,0.0026902836,0,1
+7207,desktop,(direct),United States,5–20m,desktop_(direct),3.0,574.0,0,0.3135888173948972,1,,,0.002601434,0,1
+5328,desktop,youtube.com,United States,>20m,desktop_youtube.com,4.0,2410.0,0,0.0995850597613678,1,,,0.0024814138,0,1
+3746,desktop,(direct),United States,5–20m,desktop_(direct),2.0,513.0,0,0.2339181012961285,1,,,0.002452019,0,1
+7296,desktop,Other,United States,5–20m,desktop_sites.google.com,4.0,613.0,0,0.3915170905529764,1,,,0.0024402286,0,1
+5593,desktop,google,Other,5–20m,desktop_google,17.0,310.0,0,3.2903219438086557,0,,,0.0023860547,0,1
+7511,desktop,google,United States,>20m,desktop_google,6.0,1430.0,0,0.2517482411853884,1,,,0.0023848452,0,1
+3891,desktop,youtube.com,United States,5–20m,desktop_youtube.com,2.0,556.0,0,0.2158273148387789,1,,,0.0022869098,0,1
+7699,desktop,google,United States,>20m,desktop_google,7.0,1213.0,0,0.3462489523702085,1,,,0.0022805366,0,1
+5391,desktop,google,United States,>20m,desktop_google,6.0,1212.0,0,0.297029688265857,1,,,0.0022805366,0,1
+7569,mobile,google,United States,>20m,mobile_google,7.0,1731.0,0,0.2426343070144087,1,,,0.0019948948,0,1
+7390,desktop,(direct),United States,>20m,desktop_(direct),4.0,2415.0,0,0.0993788795185371,1,,,0.0018689246,0,1
+7907,mobile,google,Taiwan,5–20m,mobile_google,19.0,1107.0,0,1.0298102422867077,0,,,0.0018032411,0,1
+4532,desktop,(direct),United States,5–20m,desktop_(direct),5.0,701.0,0,0.427960020431382,1,,,0.001677458,0,1
+4281,mobile,youtube.com,United States,5–20m,mobile_youtube.com,4.0,1179.0,0,0.203562330607515,1,,,0.0015100281,0,1
+4696,desktop,(direct),United States,>20m,desktop_(direct),9.0,2247.0,0,0.2403204208192144,1,,,0.0014696185,0,1
+4531,desktop,(direct),United States,>20m,desktop_(direct),5.0,1992.0,0,0.1506024051023372,1,,,0.0014696185,0,1
+4757,desktop,(direct),United States,5–20m,desktop_(direct),10.0,627.0,0,0.956937707470076,1,,,0.0013911878,0,1
+7830,desktop,(direct),India,5–20m,desktop_(direct),11.0,627.0,0,1.0526314782170836,0,,,0.0012680552,0,1
+1803,mobile,(direct),United States,5–20m,mobile_(direct),8.0,593.0,0,0.8094434256886923,1,,,0.0012352502,0,1
+4471,mobile,youtube.com,United States,5–20m,mobile_youtube.com,4.0,1026.0,0,0.2339181149755488,1,,,0.0012241383,0,1
+1671,mobile,Partners,United States,5–20m,mobile_Partners,5.0,1039.0,0,0.2887391556069785,1,,,0.0012241383,0,1
+1307,mobile,(direct),United States,5–20m,mobile_(direct),2.0,842.0,0,0.1425178045711778,1,,,0.0011425556,0,1
+7796,desktop,google,Other,5–20m,desktop_google,14.0,347.0,0,2.420748860965615,0,,,0.001105425,0,1
+5634,desktop,google,India,>20m,desktop_google,20.0,1527.0,0,0.7858545860175016,0,,,0.0010986776,0,1
+5623,desktop,Other,Japan,>20m,desktop_yahoo,16.0,1275.0,0,0.7529411410380639,0,,,0.0010981064,0,1
+5511,desktop,(direct),India,5–20m,desktop_(direct),10.0,535.0,0,1.1214952013276411,0,,,0.0010917609,0,1
+3749,desktop,(direct),United States,5–20m,desktop_(direct),2.0,333.0,0,0.3603602954305774,1,,,0.0010660143,0,1
+7725,mobile,google,United States,5–20m,mobile_google,10.0,1108.0,0,0.5415162161633819,1,,,0.0010338569,0,1
+7617,desktop,Partners,United States,5–20m,desktop_Partners,7.0,549.0,0,0.7650272387948374,1,,,0.0010050457,0,1
+4607,desktop,(direct),United States,5–20m,desktop_(direct),8.0,855.0,0,0.5614034693751951,1,,,0.000942952,0,1
+7900,desktop,google,Taiwan,>20m,desktop_google,18.0,2228.0,0,0.484739663786185,0,,,0.0009211633,0,1
+7597,desktop,(direct),United States,5–20m,desktop_(direct),7.0,718.0,0,0.5849581683878968,1,,,0.00088080886,0,1
+4764,desktop,(direct),United States,1–5m,desktop_(direct),10.0,216.0,0,2.7777770061730536,1,,,0.00083277863,0,1
+4802,desktop,(direct),Other,>20m,desktop_(direct),16.0,1798.0,0,0.5339265672772002,0,,,0.0008133414,0,1
+7845,mobile,google,Taiwan,1–5m,mobile_google,15.0,286.0,0,3.1468524866743035,0,,,0.00078822573,0,1
+22,tablet,google,Canada,1–5m,tablet_google,14.0,193.0,0,4.352330253161579,1,,,0.0007878615,0,1
+4781,desktop,(direct),United States,5–20m,desktop_(direct),11.0,1028.0,0,0.6420233088313244,1,,,0.00078219007,0,1
+7906,desktop,google,Other,5–20m,desktop_google,17.0,327.0,0,3.119265482703581,0,,,0.0007376787,0,1
+6949,desktop,(direct),United States,5–20m,desktop_(direct),2.0,369.0,0,0.3252031991539513,1,,,0.00070449756,0,1
+4805,mobile,(direct),Other,5–20m,mobile_(direct),13.0,431.0,0,1.809744527645773,0,,,0.00070047576,0,1
+5368,desktop,google,Other,5–20m,desktop_google,6.0,902.0,0,0.399113055491371,1,,,0.00068004313,0,1
+7851,desktop,(direct),Taiwan,1–5m,desktop_(direct),14.0,190.0,0,4.421051235457504,0,,,0.0006732236,0,1
+7611,desktop,google,United States,5–20m,desktop_google,7.0,469.0,0,0.8955222734939522,1,,,0.000644754,0,1
+7464,desktop,google,Canada,>20m,desktop_google,4.0,2651.0,0,0.0905318727152348,1,,,0.00064409734,0,1
+5300,desktop,(direct),United States,1–5m,desktop_(direct),5.0,91.0,0,3.2967011230542047,1,,,0.0006167176,0,1
+4,mobile,google,Canada,1–5m,mobile_google,15.0,163.0,0,5.521470360194959,1,,,0.0005945528,0,1
+5497,desktop,google,Canada,>20m,desktop_google,9.0,1267.0,0,0.4262036104402394,1,,,0.0005782571,0,1
+5,desktop,google,Other,5–20m,desktop_google,13.0,372.0,0,2.0967738553590554,0,,,0.0005376583,0,1
+1850,mobile,google,United States,1–5m,mobile_google,9.0,241.0,0,2.2406633425734417,1,,,0.00052541855,0,1
+4071,desktop,(direct),Other,5–20m,desktop_(direct),3.0,500.0,0,0.3599999568000052,0,,,0.00048202867,0,1
+7704,mobile,google,United States,1–5m,mobile_google,9.0,234.0,0,2.307691715976483,1,,,0.0004766301,0,1
+4099,mobile,(direct),Other,5–20m,mobile_(direct),3.0,494.0,0,0.3643724253798674,0,,,0.00045898228,0,1
+5367,tablet,(direct),Taiwan,5–20m,tablet_(direct),3.0,556.0,0,0.3237409722581684,0,,,0.0004529054,0,1
+4399,desktop,(direct),United States,5–20m,desktop_(direct),5.0,319.0,0,0.9404386945883332,1,,,0.00044549606,0,1
+1799,desktop,(direct),United States,5–20m,desktop_(direct),5.0,325.0,0,0.9230767526627532,1,,,0.00044549606,0,1
+1646,desktop,analytics.google.com,Other,>20m,desktop_analytics.google.com,4.0,2237.0,0,0.1072865416016126,1,,,0.0004303123,0,1
+4711,mobile,(direct),United States,>20m,mobile_(direct),11.0,1214.0,0,0.543657304267349,1,,,0.00041706144,0,1
+7277,desktop,google,Taiwan,5–20m,desktop_google,4.0,558.0,0,0.4301074806336042,0,,,0.0004163458,0,1
+4623,desktop,(direct),United States,1–5m,desktop_(direct),9.0,225.0,0,2.399999360000171,1,,,0.000414944,0,1
+5028,desktop,youtube.com,Other,5–20m,desktop_youtube.com,2.0,492.0,0,0.243902409280194,0,,,0.00041063887,0,1
+1348,desktop,google,Taiwan,5–20m,desktop_google,2.0,985.0,0,0.121827403746554,0,,,0.00040333177,0,1
+4637,desktop,(direct),United States,5–20m,desktop_(direct),7.0,412.0,0,1.0194173272693212,1,,,0.00039324933,0,1
+7567,mobile,google,United States,1–5m,mobile_google,7.0,128.0,0,3.2812484619147835,1,,,0.00038882802,0,1
+7324,mobile,google,United States,1–5m,mobile_google,4.0,72.0,0,3.3333305555578705,1,,,0.00038882802,0,1
+7061,desktop,google,Other,5–20m,desktop_google,3.0,730.0,0,0.2465753221992886,0,,,0.00038735796,0,1
+1246,desktop,(direct),Germany,5–20m,desktop_(direct),2.0,524.0,0,0.2290076073655411,0,,,0.00038599406,0,1
+3882,desktop,(direct),Other,5–20m,desktop_(direct),2.0,521.0,0,0.2303262690603145,0,,,0.00038599406,0,1
+1732,desktop,google,United States,5–20m,desktop_google,6.0,342.0,0,1.052631394275194,1,,,0.00036394916,0,1
+3567,desktop,(direct),Other,5–20m,desktop_(direct),2.0,668.0,0,0.1796407024274818,0,,,0.00036368333,0,1
+5019,mobile,google,India,5–20m,mobile_google,2.0,1142.0,0,0.1050788035860523,0,,,0.000360377,0,1
+7721,desktop,(direct),United States,5–20m,desktop_(direct),10.0,307.0,0,1.9543970121699652,1,,,0.00035659326,1,1
+1764,desktop,google,United States,5–20m,desktop_google,7.0,359.0,0,1.1699162390112134,1,,,0.00035386896,0,1
+7599,mobile,(direct),United States,5–20m,mobile_(direct),7.0,352.0,0,1.1931816147985883,1,,,0.0003474084,0,1
+4464,desktop,(direct),United States,1–5m,desktop_(direct),5.0,249.0,0,1.2048189867906054,1,,,0.0003464225,0,1
+5297,mobile,google,Other,5–20m,mobile_google,5.0,734.0,0,0.4087193126387483,0,,,0.00034610345,0,1
+7743,desktop,google,United States,1–5m,desktop_google,11.0,233.0,0,2.832617296321726,1,,,0.00034383257,0,1
+4593,desktop,(direct),United States,1–5m,desktop_(direct),6.0,104.0,0,3.4615364644981934,1,,,0.00034239527,0,1
+7565,desktop,(direct),United States,1–5m,desktop_(direct),5.0,86.0,0,3.488369659276982,1,,,0.00034239527,0,1
+7477,desktop,(direct),United States,1–5m,desktop_(direct),5.0,86.0,0,3.488369659276982,1,,,0.00034239527,0,1
+4350,desktop,(direct),United States,5–20m,desktop_(direct),4.0,400.0,0,0.5999999100000135,1,,,0.0003423241,0,1
+7113,desktop,(direct),United States,1–5m,desktop_(direct),3.0,67.0,0,2.686564758300217,1,,,0.00033175302,0,1
+7626,desktop,(direct),United States,1–5m,desktop_(direct),6.0,132.0,0,2.727271487603869,1,,,0.00033175302,0,1
+7582,desktop,(direct),United States,1–5m,desktop_(direct),7.0,156.0,0,2.692306656805132,1,,,0.00033175302,0,1
+4741,desktop,(direct),United States,1–5m,desktop_(direct),8.0,177.0,0,2.7118634875039023,1,,,0.00033175302,0,1
+5438,mobile,google,United States,1–5m,mobile_google,8.0,271.0,0,1.7712173200256855,1,,,0.00031912327,0,1
+6862,desktop,(direct),United States,10s–1m,desktop_(direct),2.0,36.0,0,3.333327777787037,1,,,0.00031326353,0,1
+3621,desktop,(direct),United States,10s–1m,desktop_(direct),2.0,36.0,0,3.333327777787037,1,,,0.00031326353,0,1
+1293,desktop,(direct),United States,10s–1m,desktop_(direct),2.0,36.0,0,3.333327777787037,1,,,0.00031326353,0,1
+4324,desktop,Other,United States,5–20m,desktop_sites.google.com,4.0,344.0,0,0.6976742969172738,1,,,0.0003106197,0,1
+5613,mobile,google,Other,5–20m,mobile_google,20.0,413.0,0,2.905568585147421,0,,,0.0003101341,0,1
+4659,desktop,(direct),United States,5–20m,desktop_(direct),10.0,436.0,0,1.3761465996128532,1,,,0.0003069575,0,1
+4506,desktop,(direct),United States,1–5m,desktop_(direct),6.0,257.0,0,1.4007778830868756,1,,,0.00030225128,0,1
+1273,desktop,analytics.google.com,Other,5–20m,desktop_analytics.google.com,2.0,339.0,0,0.3539822382332321,1,,,0.0002994513,0,1
+3547,desktop,(direct),Australia,5–20m,desktop_(direct),2.0,715.0,0,0.1678321537483507,0,,,0.00029005963,0,1
+7731,desktop,google,Other,5–20m,desktop_google,8.0,581.0,0,0.8261617046993076,0,,,0.00028754657,0,1
+1768,desktop,google,United States,5–20m,desktop_google,7.0,458.0,0,0.9170304475505964,1,,,0.00028485234,0,1
+4586,desktop,(direct),United States,1–5m,desktop_(direct),6.0,240.0,0,1.4999996250000938,1,,,0.00027860864,0,1
+1667,desktop,Partners,Other,5–20m,desktop_Partners,5.0,774.0,0,0.3875968691785373,0,,,0.00026960252,0,1
+1766,mobile,google,United States,5–20m,mobile_google,7.0,325.0,0,1.2923074537278545,1,,,0.0002693415,0,1
+5493,mobile,google,India,5–20m,mobile_google,7.0,698.0,0,0.6017191459840276,0,,,0.00026888427,0,1
+4444,mobile,(direct),United States,1–5m,mobile_(direct),5.0,92.0,0,3.260867438564714,1,,,0.00026766752,0,1
+4708,mobile,(direct),United States,1–5m,mobile_(direct),11.0,204.0,0,3.235293166090245,1,,,0.00026766752,0,1
+7383,mobile,(direct),India,5–20m,mobile_(direct),4.0,817.0,0,0.2937576283654128,0,,,0.00026685314,0,1
+1875,desktop,google,Other,>20m,desktop_google,7.0,1786.0,0,0.2351623661199653,0,,,0.0002654165,0,1
+1350,desktop,google,Australia,>20m,desktop_google,2.0,1600.0,0,0.0749999971875001,0,,,0.0002654165,0,1
+7630,desktop,google,Other,>20m,desktop_google,6.0,1384.0,0,0.2601155956597285,0,,,0.0002654165,0,1
+5656,desktop,google,United States,<10s,desktop_google,0.0,0.0,1,0.0,1,,,0.0002648563,0,1
+4675,mobile,(direct),United States,5–20m,mobile_(direct),9.0,438.0,0,1.2328765434415694,1,,,0.0002632953,0,1
+5280,desktop,google,United States,1–5m,desktop_google,4.0,289.0,0,0.8304496545779264,1,,,0.00026078572,0,1
+1612,desktop,google,United States,1–5m,desktop_google,4.0,246.0,0,0.97560951814402,1,,,0.00025773965,0,1
+7673,mobile,google,Other,>20m,mobile_google,6.0,1389.0,0,0.2591792544630991,0,,,0.00025773008,0,1
+4451,mobile,(direct),United States,1–5m,mobile_(direct),5.0,89.0,0,3.370784244415116,1,,,0.00025379608,0,1
+5390,mobile,google,United States,1–5m,mobile_google,6.0,248.0,0,1.4516125520292211,1,,,0.00025329425,0,1
+1467,desktop,(direct),United States,10s–1m,desktop_(direct),3.0,55.0,0,3.272723702483234,1,,,0.0002517291,0,1
+1653,desktop,Other,Japan,>20m,desktop_yahoo,5.0,1339.0,0,0.2240477868238482,0,,,0.00024938726,0,1
+1773,desktop,Other,France,>20m,desktop_blog.golang.org,5.0,1741.0,0,0.1723147556927712,0,,,0.00024938726,0,1

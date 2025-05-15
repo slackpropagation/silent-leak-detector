@@ -131,4 +131,14 @@ fig.add_annotation(
 
 # 10. Streamlit page configuration and render
 st.set_page_config(layout="wide")
+
 st.plotly_chart(fig, use_container_width=True)
+
+# Page context and implementation details
+st.markdown("""
+#### **Graph Context**
+This map visualizes conversion rates by country, filtering out any with fewer than 100 sessions to ensure statistical reliability. Country names are converted to ISO‑3 codes via the `pycountry` library for Plotly’s choropleth. A custom rainbow‑ish colorscale highlights performance from low (deep blue) to high (red) rates.  
+The projection uses an equirectangular map on a dark background theme (`#2E2E2E`), with oceans and land styled in complementary shades.  
+A rotated annotation serves as the vertical colorbar label, and footer annotations display total sessions and overall conversion rate for all included countries.  
+Data is loaded from `data/cleaned_sessions.csv` and the figure can be optionally exported to `outputs/country_conversion_map.png`.
+""")
