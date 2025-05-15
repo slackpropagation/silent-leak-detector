@@ -5,10 +5,12 @@
 
 **Last Updated:** May 14, 2025
 
+ 
 ## Table of Contents
 
 - [Executive Summary](#executive-summary)
 - [Setup & Requirements](#setup--requirements)
+- [Data Source](#data-source)
 - [ML Model Methodology](#ml-model-methodology)
 - [Why It Matters](#why-it-matters)
 - [Interactive Exploration & Probability Distribution](#interactive-exploration--probability-distribution)
@@ -17,12 +19,12 @@
   - [2. Funnel Waterfall by Device](#2-funnel-waterfall-by-device)
   - [3. Session Duration vs Conversion](#3-session-duration-vs-conversion)
   - [4. Source × Device Heatmap](#4-source-×-device-heatmap)
-  - [5. Top Conversion Candidates](#5-top-conversion-candidates)
+  - [5. Top Sources by Avg. Conversion Probability (by Device)](#5-top-sources-by-avg-conversion-probability-by-device)
+  - [6. Top Conversion Candidates](#6-top-conversion-candidates)
 - [Business Takeaways](#business-takeaways)
 - [Example Use Cases](#example-use-cases)
 - [Next Steps & Recommendations](#next-steps--recommendations)
 - [Folder Structure](#folder-structure)
-- [Data Source](#data-source)
 - [License](#license)
 
 This project provides a data-driven dashboard to analyze and visualize user engagement patterns across a digital platform, based on real session-level data exported from Google Analytics. It aims to uncover critical bottlenecks (“leaks”) in the user journey; specifically, where and why users disengage before converting. By breaking down behavior across dimensions like geography, traffic source, device type, session duration, and funnel stage, this tool helps marketing and product teams:
@@ -278,7 +280,18 @@ To evaluate performance, we compared your actual device-level conversion rates w
 | Tablet  | 452      | 2           | 0.44%                     | 2.2%             | -1.76% |
 
 
-### 5. **Top Conversion Candidates**
+### 5. **Top Sources by Avg. Conversion Probability (by Device)**
+
+This bar chart shows the average predicted conversion probability for each top traffic source, broken out by device (Desktop, Mobile, Tablet). It highlights which channels and devices drive the highest likelihood of conversion.
+
+![Top Sources by Avg. Conversion Probability (by Device)](outputs/Top_Conversion_Candidates.png)
+
+**Key Insight:** Desktop consistently outperforms mobile and tablet across channels; Facebook on desktop leads at ~65% conversion likelihood, while mobile and tablet rates remain below 5%.
+
+**Page Context:**  
+Implemented in `pages/Top_Sources_by_Conversion_Probability.py` (or the actual filename), this page reads `data/cleaned_sessions.csv`, groups by `source` and `devicecategory`, computes the mean predicted conversion probability, filters out zero-value combinations, and renders a Plotly bar chart with neon-themed device colors.
+
+### 6. **Top Conversion Candidates**
 
 This interactive table displays the top 10% of sessions ranked by predicted conversion probability. Users can filter by device type, traffic source, and country, and download the filtered list for follow-up actions.
 
@@ -360,7 +373,8 @@ silent-leak-detector/
 │   ├── session_duration_vs_conversion.png
 │   ├── session_predictions.csv
 │   ├── source_device_heatmap.png
-│   └── top_10pct_sessions.csv
+│   ├── top_10pct_sessions.csv
+│   └── Top_Conversion_Candidates.png
 ├── pages/
 │   ├── Country_Conversion_Map.py
 │   ├── Funnel_Dropoff_by_Device.py
